@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/a658a7b479.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../img/logo.png" />
+    <link rel="stylesheet" href="../css/sorting.css" />
+    <title>Sorting Visualizer</title>
+</head>
+
+<body>
+    <nav>
+        <!-- <div class="mobile-logo"> -->
+            <!-- <br /> -->
+            <!-- <h1>
+                <a href="../index.html">Algorithm<span>Visualization</span></a>
+                <br>
+            </h1> -->
+        <!-- </div> -->
+        <div class="logo">
+            <a href="../index.html">Algorithm<span>Visualizer</span></a>
+
+        </div>
+        <ul>
+            <li><a href='../index.html'><label>HOME</label></a></li>
+
+            <li>
+                <a href="#">         
+                        <select id="sort_type" name="sort_type" onchange="algoSelected()">
+                        <option value="" disabled selected>
+                            CHOOSE ALGORITHM
+                        </option>
+                        <option value="bubble">
+                            BUBBLE SORT
+                        </option>
+
+                        <option value="selection">
+                            SELECTION SORT
+                        </option>
+                        <option value="insertion">
+                            INSERTION SORT
+                        </option>
+                        <option value="merge">
+                            MERGE SORT
+                        </option>
+                        <option value="quick">
+                            QUICK SORT
+                        </option>
+                    </select>
+                </a>
+            </li>
+            
+            <li>
+                <a>
+                    <label for="generate" id="generateButton" >GENERATE </label>  
+                </a>
+            </li>
+
+            <li>
+                <a>
+                     <label for="size" class="sliderValue">Size </label> 
+                     <input type="range" min="10" max="100" value="30" class="slider" id="barSlider" />
+                    <!-- <input id="size" onchange="sizeChange()" type="range" min=10 max=70 step=1 value=30> --> 
+                </a>
+            </li>
+
+            <li>
+                <a>
+                    <label for="speed"class="speedValue">SPEED </label>
+                    <input type="range" min="25" max="300" value="150" class="slider" id="speedSlider" />
+                    <!-- <input id="speed" onchange="speedChange()" type="range" min=1 max=5 step=1 value=3> -->
+                </a>
+            </li>
+
+            
+
+        </ul>
+    </nav>
+    <br />
+    <h1 class="container heading">Pick A Sorting Algorithm !</h1>
+
+    <!-- <div id="container" ></div> -->
+    <div id="firstcontainer" >
+        <div id="container" ></div>
+    </div>
+    <div id="buttonsdiv">
+        <button type="button" id="sortButton" class="button">Sort</button>
+        <button type="button" id="pauseButton" class="button">Pause</button>
+        <button type="button" id="stopButton" class="button">Stop</button>
+      </div>
+
+    
+    <script src="../js/sorting/sorting.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* :root {
+    --total-width:100%;
+} */
+
+body {
+    background: #f2f2f2;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav {
+    background: #1b1b1b;
+    box-shadow: 5px 5px 4px #3d3c3c;
+    /* min-width: 1200px; */
+    min-width: var(--total-width);
+}
+
+button,
+select {
+    color: white;
+    background-color: #1b1b1b;
+    border: none;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    /* padding: 8px 15px; */
+}
+
+button:focus,
+select:focus {
+    outline: none;
+}
+
+button:disabled {
+    color: #ddd;
+}
+
+nav:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+nav .logo {
+    float: left;
+    color: white;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 60px;
+}
+
+nav .logo span {
+    color: #66ffff;
+}
+
+nav ul {
+    float: right;
+    margin-right: 40px;
+    list-style: none;
+    position: relative;
+}
+
+nav ul li {
+    /* float: left; */
+    display: inline-block;
+    background: #1b1b1b;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    line-height: 70px;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 15px;
+}
+
+nav ul li a:hover {
+    color: cyan;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #33ffff, 0 0 10px #66ffff;
+}
+
+.mobile-logo {
+    display: none;
+}
+
+#size {
+    cursor: pointer;
+}
+
+#speed {
+    cursor: pointer;
+}
+
+.heading {
+    font-size: 37px;
+    line-height: 100px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+    nav {
+        max-width: var(--total-width);
+    }
+    .logo {
+        display: none;
+    }
+    .mobile-logo span {
+        color: #66ffff;
+    }
+    .mobile-logo {
+        display: block;
+        background-color: #1b1b1b;
+        /* min-width: 1200px; */
+        min-width: var(--total-width);
+        text-align: center;
+        border: none;
+        outline: none;
+        font-size: 12px;
+        line-height: 20px;
+        margin-bottom: 15px;
+    }
+    select {
+        font-size: 14px;
+    }
+    nav ul {
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    nav ul li a {
+        font-size: 10px;
+        padding: 8px 0px;
+        line-height: 40px;
+    }
+    label {
+        font-size: 14px;
+    }
+    #size {
+        max-width: 115px;
+        max-height: 10px;
+    }
+    #speed {
+        max-width: 115px;
+        max-height: 10px;
+    }
+    .heading {
+        font-size: 22px;
+        line-height: 50px;
+    }
+}
+
+
+/*
+NAVBAR COMPLETED
+*/
+
+#firstcontainer{
+    margin-right: 2px;
+    margin-left: 5px;
+}
+
+#container {
+    display: flex;
+    /* width: 99%; */
+    width:30%;
+    min-width: 59%;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    box-sizing: border-box;
+    margin-top: 25px;
+  }
+  
+  .bar {
+    display: inline-block;
+    border-radius: 30px;
+    margin-right: 1px;
+    align-self: flex-end;
+    transition: 0.2s transform ease;
+    position: absolute;
+  }
+  
+  .barValue {
+    font-size :14.5px;
+    margin-right: 1px;
+    align-self: flex-end;
+    transition: 0.2s transform ease;
+    position: absolute;
+    color: #bd1818;
+    font-weight: bold;
+  }
+  
+  .button {
+    padding: 0.8rem 1.4rem;
+    font-size: 1rem;
+    color: white;
+    border-radius: 5px;
+    background: #161824;
+    letter-spacing: 1.2px;
+    border: none;
+    outline: none;
+    margin-top: 1rem;
+    transition: all 0.25s ease-in-out;
+  }
+  .button:hover {
+    cursor: pointer;
+    transform: scale(1.1) perspective(1px);
+  }
+  #buttonsdiv {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  #sortButton {
+    margin-right: 10px;
+  }
+  #stopButton {
+    margin-left: 10px;
+  }
+  
+
+
+@media (max-width: 900px) {
+  #title {
+    font-size: 0px;
+  }
+  .slidecontainer,
+  #sort_type {
+    margin-top: 0px;
+  }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.498" />
+    <script src="https://kit.fontawesome.com/a658a7b479.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/pathfinding.css" />
+    <link rel="icon" href="../img/logo.png" />
+    <title>Pathfinding Visualizer</title>
+</head>
+
+<body onload="enableTutorial()">
+    <div class="overlay">
+        <nav class="content">
+            <div class="mobile-logo">
+                <!-- <br />
+                <h1>
+                    <a href="../index.html">Algorithm<span>Visualizer</span></a>
+                </h1> -->
+            </div>
+            <div class="logo">
+                <a href="../index.html">Algorithm<span>Visualizer</span></a>
+            </div>
+
+            <ul>
+                <li><a href='../index.html'><label>HOME</label></a></li>
+                <li>
+                    <a href="#">
+                        <select name="algo" id="algo" onchange="algoSelected()">
+                            <option value="" disabled selected>
+                                Choose Algorithm
+                            </option>
+                            <option value="bfs">
+                                BREADTH FIRST SEARCH
+                            </option>
+                            <option value="dfs">
+                                DEPTH FIRST SEARCH
+                            </option>
+
+                        </select>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><button id="visualize" style="color: aqua">
+                            VISUALIZE
+                        </button></a>
+                </li>
+
+                <li>
+                    <a href="#"><button id="random-maze">
+                            RANDOM WALL MAZE
+                        </button></a>
+                </li>
+
+                <li>
+                    <a href="#"><button id="clear">CLEAR PATH</button></a>
+                </li>
+
+                <li>
+                    <a href="#"><button id="reset" style="color: red">
+                            RESET
+                        </button></a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="container heading">
+            <h1>
+                 Pick A Pathfinding Algorithm !
+            </h1>
+        </div>
+
+        <div class="notations container content">
+            <div class="notation" style="display: inline">
+                <canvas id="notation-box1" width="30" height="30" style="display: inline"></canvas>
+                <h2 class="notation-text">Start</h2>
+            </div>
+            <div class="notation" style="display: inline">
+                <canvas id="notation-box2" width="30" height="30" style="display: inline"></canvas>
+                <h2 class="notation-text">End</h2>
+            </div>
+            <div class="notation" style="display: inline">
+                <canvas id="notation-box3" width="30" height="30" style="display: inline"></canvas>
+                <h2 class="notation-text">Wall</h2>
+            </div>
+            <div class="notation" style="display: inline">
+                <canvas id="notation-box4" width="30" height="30" style="display: inline"></canvas>
+                <h2 class="notation-text">Visited</h2>
+            </div>
+            <div class="notation" style="display: inline">
+                <canvas id="notation-box5" width="30" height="30" style="display: inline"></canvas>
+                <h2 class="notation-text">Path</h2>
+            </div>
+        </div>
+
+        <div class="notations container content">
+            <div class="notation">
+                <button class="btn-start tutorial-btn" id="start" title="Page Walk through">
+                   
+                </button>
+                <button class="btn-danger tutorial-btn" id="end" title="Page Walk through">
+                    
+                </button>
+            </div>
+        </div>
+
+        <div class="container content">
+            <canvas id="main-canvas"></canvas>
+        </div>
+
+        <br />
+        <h2 class="container" id="visited"></h2>
+        <h2 class="container" id="result"></h2>
+        <br /><br /><br />
+    </div>
+
+   
+    </div>
+
+    <script src="../js/pathfinding/sketch.js"></script>
+    <script src="../js/pathfinding/Main/board.js"></script>
+    <script src="../js/pathfinding/algorithms/bfs.js"></script>
+    <script src="../js/pathfinding/algorithms/dfs.js"></script>
+    <script src="../js/pathfinding/utils.js"></script>
+    <script src="../js/pathfinding/maze/randomMaze.js"></script>
+    <script src="../js/pathfinding/init.js"></script>
+</body>
+
+</html>
